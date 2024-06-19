@@ -61,7 +61,9 @@
         {
             "Yes": {
                 "env_git_url_shared_library_submodule": "Github URL of shared library"
-            },
+            }
+        },
+        {
             "No": "none"
         }
     ]
