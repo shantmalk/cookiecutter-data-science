@@ -81,5 +81,14 @@ for generated_path in Path("{{ cookiecutter.module_name }}").iterdir():
         generated_path.write_text("")
 # {% endif %}
 
-# Custom post porcessing
-print("hello world")
+# Modify .env file
+
+# TODO: parse environment variables from cli
+# TODO: initiate environment variables in .env file
+# TODO: load environment variables in config.py file
+
+# Modify git repo
+
+# TODO: parse git repo urls
+# TODO: add git submodules 
+
