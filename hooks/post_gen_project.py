@@ -80,3 +80,8 @@ for generated_path in Path("{{ cookiecutter.module_name }}").iterdir():
         # remove any content in __init__.py since it won't be available
         generated_path.write_text("")
 # {% endif %}
+
+# {% custom post processing %}
+print("hello world")
+
+# {% endif %}
