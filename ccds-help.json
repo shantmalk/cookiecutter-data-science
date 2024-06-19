@@ -311,7 +311,16 @@
                 "help": {
                     "description": "Include shared library git submodule.",
                     "more_information": ""
-                }
+                },
+                "subfields": [
+                    {
+                        "field": "env_git_url_shared_library_submodule",
+                        "help": {
+                            "description": "Github URL of shared library",
+                            "more_information": ""
+                        }
+                    }
+                ]
             },
             {
                 "choice": "No",
