@@ -300,35 +300,10 @@
         }
     },
     {
-        "field": "include_shared_library_submodule",
+        "field": "env_git_url_shared_library_submodule",
         "help": {
-            "description": "Whether to include a shared library as a submodule.",
+            "description": "URL of Github repo to add as a submodule",
             "more_information": ""
-        },
-        "choices": [
-            {
-                "choice": "Yes",
-                "help": {
-                    "description": "Include shared library git submodule.",
-                    "more_information": ""
-                },
-                "subfields": [
-                    {
-                        "field": "env_git_url_shared_library_submodule",
-                        "help": {
-                            "description": "Github URL of shared library",
-                            "more_information": ""
-                        }
-                    }
-                ]
-            },
-            {
-                "choice": "No",
-                "help": {
-                    "description": "Do not include git submodule.",
-                    "more_information": ""
-                }
-            }
-        ]
+        }
     }
 ]
