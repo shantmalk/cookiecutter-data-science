@@ -81,7 +81,5 @@ for generated_path in Path("{{ cookiecutter.module_name }}").iterdir():
         generated_path.write_text("")
 # {% endif %}
 
-# {% custom post processing %}
+# Custom post porcessing
 print("hello world")
-
-# {% endif %}
