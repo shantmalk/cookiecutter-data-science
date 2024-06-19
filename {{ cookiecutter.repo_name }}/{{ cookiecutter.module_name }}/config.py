@@ -7,7 +7,7 @@ from loguru import logger
 # Load environment variables from .env file if it exists
 load_dotenv()
 
-SNOWFLAKE_USR_ENV = os.getenv("SNOWFLAKE_USR_ENV")
+SNOWFLAKE_USER_ENV = os.getenv("SNOWFLAKE_USER_ENV")
 SNOWFLAKE_URL_ENV = os.getenv("SNOWFLAKE_URL_ENV")
 
 # Paths
