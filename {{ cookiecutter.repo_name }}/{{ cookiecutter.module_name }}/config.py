@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -5,6 +6,11 @@ from loguru import logger
 
 # Load environment variables from .env file if it exists
 load_dotenv()
+
+SNOWFLAKE_USR_ENV = os.getenv("SNOWFLAKE_USR_ENV")
+SNOWFLAKE_URL_ENV = os.getenv("SNOWFLAKE_URL_ENV")
+
+print(SNOWFLAKE_USR_ENV, SNOWFLAKE_URL_ENV)
 
 # Paths
 PROJ_ROOT = Path(__file__).resolve().parents[1]

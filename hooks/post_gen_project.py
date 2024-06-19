@@ -1,3 +1,4 @@
+import dotenv
 import shutil
 from copy import copy
 from pathlib import Path
@@ -6,6 +7,7 @@ from pathlib import Path
 #   our workaround is to include these utility functions in the CCDS package
 from ccds.hook_utils.custom_config import write_custom_config
 from ccds.hook_utils.dependencies import basic, packages, scaffold, write_dependencies
+from ccds.constants import SNOWFLAKE_USR_ENV, SNOWFLAKE_URL_ENV
 
 #
 #  TEMPLATIZED VARIABLES FILLED IN BY COOKIECUTTER
@@ -82,10 +84,11 @@ for generated_path in Path("{{ cookiecutter.module_name }}").iterdir():
 # {% endif %}
 
 # Modify .env file
-
-# TODO: parse environment variables from cli
-# TODO: initiate environment variables in .env file
-# TODO: load environment variables in config.py file
+env_file_path = Path(".env")
+env_file_path.touch(mode=0o600, exist_ok=True)
+# Save some values to the file
+dotenv.set_key(dotenv_path=env_file_path, key_to_set=SNOWFLAKE_USR_ENV, value_to_set="{{ cookiecutter.env_snowflake_usr }}")
+dotenv.set_key(dotenv_path=env_file_path, key_to_set=SNOWFLAKE_URL_ENV, value_to_set="{{ cookiecutter.env_snowflake_url }}")
 
 # Modify git repo
 
