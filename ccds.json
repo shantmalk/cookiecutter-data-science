@@ -54,7 +54,7 @@
         "Yes",
         "No"
     ],
-    "env_snowflake_user": "env_snowflake_user",
-    "env_snowflake_url": "env_snowflake_url",
-    "env_data_path": "env_data_path"
+    "env_snowflake_user": "Snowflake username",
+    "env_snowflake_url": "Snowflake URL",
+    "env_data_path": "Shared data storage (local)"
 }
