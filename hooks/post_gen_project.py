@@ -111,8 +111,8 @@ subprocess.run("py -%s -m venv .venv" % "{{ cookiecutter.python_version_number }
 
 # Install dependencies
 subprocess.run(".venv\Scripts\python")
-subprocess.run("py -m install --upgrade pip")
-subprocess.run("py -m pip install -r requirements.txt")
+subprocess.run(".venv\Scripts\python -m install --upgrade pip")
+subprocess.run(".venv\Scripts\python -m pip install -r requirements.txt")
 
 # Complete first commit
 subprocess.run("git add .")
