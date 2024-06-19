@@ -86,6 +86,7 @@ for generated_path in Path("{{ cookiecutter.module_name }}").iterdir():
 env_file_path = Path(".env")
 env_file_path.touch(mode=0o600, exist_ok=True)
 # Save some values to the file
+print("{{ cookiecutter.env_snowflake_usr }}")
 dotenv.set_key(dotenv_path=env_file_path, key_to_set="SNOWFLAKE_USR_ENV", value_to_set="{{ cookiecutter.env_snowflake_usr }}")
 dotenv.set_key(dotenv_path=env_file_path, key_to_set="SNOWFLAKE_URL_ENV", value_to_set="{{ cookiecutter.env_snowflake_url }}")
 

@@ -10,8 +10,6 @@ load_dotenv()
 SNOWFLAKE_USR_ENV = os.getenv("SNOWFLAKE_USR_ENV")
 SNOWFLAKE_URL_ENV = os.getenv("SNOWFLAKE_URL_ENV")
 
-print(SNOWFLAKE_USR_ENV, SNOWFLAKE_URL_ENV)
-
 # Paths
 PROJ_ROOT = Path(__file__).resolve().parents[1]
 logger.info(f"PROJ_ROOT path is: {PROJ_ROOT}")
