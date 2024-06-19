@@ -101,6 +101,7 @@ subprocess.run("git init")
 
 # Add git submodules
 # NOTE: This will fail without clear warning
+# NOTE: This might need to be modified to allow specifying a branch
 subprocess.run("git submodule add %s" % "{{ cookiecutter.env_git_url_shared_library_submodule }}")
 
 # Complete first commit
