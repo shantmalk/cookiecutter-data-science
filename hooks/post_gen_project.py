@@ -82,12 +82,16 @@ for generated_path in Path("{{ cookiecutter.module_name }}").iterdir():
         generated_path.write_text("")
 # {% endif %}
 
-# Modify .env file
+# Setup .env file
 env_file_path = Path(".env")
 env_file_path.touch(mode=0o600, exist_ok=True)
-# Save some values to the file
-dotenv.set_key(dotenv_path=env_file_path, key_to_set="SNOWFLAKE_USER_ENV", value_to_set="{{ cookiecutter.env_snowflake_user }}")
-dotenv.set_key(dotenv_path=env_file_path, key_to_set="SNOWFLAKE_URL_ENV", value_to_set="{{ cookiecutter.env_snowflake_url }}")
+
+# Add Snowflake credentials to .env
+dotenv.set_key(dotenv_path=env_file_path, key_to_set="SNOWFLAKE_USER", value_to_set="{{ cookiecutter.env_snowflake_user }}")
+dotenv.set_key(dotenv_path=env_file_path, key_to_set="SNOWFLAKE_URL", value_to_set="{{ cookiecutter.env_snowflake_url }}")
+
+# Add data path
+dotenv.set_key(dotenv_path=env_file_path, key_to_set="DATA_PATH", value_to_set="{{ cookiecutter.env_data_path }}")
 
 # Modify git repo
 

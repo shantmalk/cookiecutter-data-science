@@ -291,5 +291,12 @@
             "description": "url for accessing Snowflake (saved as environment variable)",
             "more_information": ""
         }
+    },
+    {
+        "field": "env_data_path",
+        "help": {
+            "description": "Absolute path to local data storage",
+            "more_information": ""
+        }
     }
 ]

@@ -55,5 +55,6 @@
         "No"
     ],
     "env_snowflake_user": "env_snowflake_user",
-    "env_snowflake_url": "env_snowflake_url"
+    "env_snowflake_url": "env_snowflake_url",
+    "env_data_path": "env_data_path"
 }

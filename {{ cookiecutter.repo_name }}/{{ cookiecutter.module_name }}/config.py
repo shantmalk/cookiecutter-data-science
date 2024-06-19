@@ -7,8 +7,9 @@ from loguru import logger
 # Load environment variables from .env file if it exists
 load_dotenv()
 
-SNOWFLAKE_USER_ENV = os.getenv("SNOWFLAKE_USER_ENV")
-SNOWFLAKE_URL_ENV = os.getenv("SNOWFLAKE_URL_ENV")
+SNOWFLAKE_USER = os.getenv("SNOWFLAKE_USER")
+SNOWFLAKE_URL = os.getenv("SNOWFLAKE_URL")
+DATA_PATH = os.getenv("DATA_PATH")
 
 # Paths
 PROJ_ROOT = Path(__file__).resolve().parents[1]
