@@ -56,5 +56,13 @@
     ],
     "env_snowflake_user": "Snowflake username",
     "env_snowflake_url": "Snowflake URL",
-    "env_data_path": "Shared data storage (local)"
+    "env_data_path": "Shared data storage (local)",
+    "include_shared_library_submodule": [
+        {
+            "Yes": {
+                "env_git_url_shared_library_submodule": "Github URL of shared library"
+            },
+            "No": "none"
+        }
+    ]
 }
