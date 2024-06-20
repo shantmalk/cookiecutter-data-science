@@ -6,6 +6,22 @@ _A logical, reasonably standardized but flexible project structure for doing and
 
 > ℹ️ Cookiecutter Data Science v2 has changed from v1. It now requires installing the new cookiecutter-data-science Python package, which extends the functionality of the [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html) templating utility. Use the provided `ccds` command-line program instead of `cookiecutter`.
 
+## Cookiecutter Data Science Forked Requirements
+
+Cookiecutter Data Science fork will be used to encourage standardization and organization while conducting scientific research.  This fork specifically includes functionality for environment setup, that will hopefully streamline accessing data from various sources.
+
+This is a personalized fork to fulfill the following requirements:
+
+- Include Jupyter notebook template
+- Option to add personalized credentials, paths, and PYTHONPATH to `.env` file
+- Option to add `git submodule`
+- Option to specify external data storage location
+- Create `.venv` on setup
+- Automatically run requirements.txt
+- Automatically initiate `git` repo
+- Revised scaffolding based on personal preferences
+- Revised `.gitignore` to ignore common image filetypes
+
 ## Installation
 
 Cookiecutter Data Science v2 requires Python 3.8+. Since this is a cross-project utility application, we recommend installing it with [pipx](https://pypa.github.io/pipx/). Installation command options:
@@ -65,21 +81,6 @@ The directory structure of your new project will look something like this (depen
 ├── setup.cfg          <- Configuration file for flake8
 │
 └── {{ cookiecutter.module_name }}   <- Source code for use in this project.
-    │
-    ├── __init__.py             <- Makes {{ cookiecutter.module_name }} a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    └── plots.py                <- Code to create visualizations   
 ```
 
 ## Using v1
