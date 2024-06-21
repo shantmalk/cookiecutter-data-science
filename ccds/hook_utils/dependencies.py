@@ -36,6 +36,8 @@ scaffold = [
 def write_dependencies(
     dependencies, packages, pip_only_packages, repo_name, module_name, python_version
 ):
+    print("Contents of requirements.txt: ", packages)
+    print("HERE: ", dependencies == "requirements.txt")
     if dependencies == "requirements.txt":
         print("Contents of requirements.txt: ", packages)
         with open(dependencies, "w") as f:
