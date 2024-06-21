@@ -52,6 +52,8 @@ for docs_template in docs_path.iterdir():
 #
 #  POST-GENERATION FUNCTIONS
 #
+
+print("{{ cookiecutter.dependency_file }}")
 write_dependencies(
     "{{ cookiecutter.dependency_file }}",
     packages_to_install,
