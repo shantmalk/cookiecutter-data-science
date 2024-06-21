@@ -47,8 +47,8 @@
         "BSD-3-Clause"
     ],
     "docs": [
-        "mkdocs",
-        "none"
+        "none",
+        "mkdocs"
     ],
     "include_code_scaffold": [
         "Yes",
