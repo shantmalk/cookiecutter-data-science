@@ -1,13 +1,13 @@
 # src/calculations.py
 
-"""Basic module
+"""Calculations
 
 This module is a template example and is only included to show how to document code.
 
 This module allows user to make mathematical calculations.
 
 Examples:
-    >>> from test_env_3.src.module import square, add
+    >>> from {{ cookiecutter.module_name }}.src.module import square, add
     >>> square(2.0)
     4.0
     >>> square(4.0)

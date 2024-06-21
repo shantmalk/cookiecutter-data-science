@@ -1,6 +1,6 @@
 # src/module.py
 
-"""Basic module
+"""Module
 
 A short description of the module.
 
