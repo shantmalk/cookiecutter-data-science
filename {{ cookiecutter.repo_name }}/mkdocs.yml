@@ -1,0 +1,17 @@
+site_name: {{ cookiecutter.project_name }}
+# {% if cookiecutter.author_name %}
+site_author: {{ cookiecutter.author_name }}
+# {% endif %}
+
+theme: 
+  name: "material"
+
+nav:
+  - Module Docs: index.md
+  - tutorials.md
+  - How-To Guides: how-to-guides.md
+  - reference.md
+  - explanation.md
+
+plugins:
+  - mkdocstrings
