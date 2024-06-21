@@ -8,7 +8,25 @@ import json
 # https://github.com/cookiecutter/cookiecutter/issues/824
 #   our workaround is to include these utility functions in the CCDS package
 from ccds.hook_utils.custom_config import write_custom_config
-from ccds.hook_utils.dependencies import basic, packages, scaffold, write_dependencies
+from ccds.hook_utils.dependencies import basic, scaffold, write_dependencies
+
+packages = [
+    "black",
+    "flake8",
+    "isort",
+    "pip",
+    "python-dotenv",
+    "ipython",
+    "jupyterlab",
+    "matplotlib",
+    "notebook",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocstrings[python]",
+]
 
 #
 #  TEMPLATIZED VARIABLES FILLED IN BY COOKIECUTTER
@@ -53,23 +71,15 @@ for docs_template in docs_path.iterdir():
 #  POST-GENERATION FUNCTIONS
 #
 
-# write_dependencies(
-#     "{{ cookiecutter.dependency_file }}",
-#     packages_to_install,
-#     pip_only_packages,
-#     repo_name="{{ cookiecutter.repo_name }}",
-#     module_name="{{ cookiecutter.module_name }}",
-#     python_version="{{ cookiecutter.python_version_number }}",
-# )
+write_dependencies(
+    "{{ cookiecutter.dependency_file }}",
+    packages_to_install,
+    pip_only_packages,
+    repo_name="{{ cookiecutter.repo_name }}",
+    module_name="{{ cookiecutter.module_name }}",
+    python_version="{{ cookiecutter.python_version_number }}",
+)
 
-if "{{ cookiecutter.dependency_file }}" == "requirements.txt":
-    with open("requirements.txt", "w") as f:
-        lines = sorted(packages)
-
-        lines += ["" "-e ."]
-
-        f.write("\n".join(lines))
-        f.write("\n")
 
 write_custom_config("{{ cookiecutter.custom_config }}")
 
