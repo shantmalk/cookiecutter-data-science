@@ -4,6 +4,17 @@ packages = [
     "isort",
     "pip",
     "python-dotenv",
+    # NOTE: I'm just adding all these to the default option.  I can't imagine not needing these...
+    "ipython",
+    "jupyterlab",
+    "matplotlib",
+    "notebook",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocstrings[python]",
 ]
 
 basic = [
