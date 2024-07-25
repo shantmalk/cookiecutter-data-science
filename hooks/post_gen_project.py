@@ -135,9 +135,14 @@ os.system("git init")
 # subprocess.run(
 #     "git submodule add %s" % "{{ cookiecutter.env_git_url_shared_library_submodule }}"
 # )
-os.system(
-    "git submodule add %s" % "{{ cookiecutter.env_git_url_shared_library_submodule }}"
-)
+if (
+    "{{ cookiecutter.env_git_url_shared_library_submodule }}"
+    != "Github URL of shared library (leave blank if undesired)"
+):
+    os.system(
+        "git submodule add %s"
+        % "{{ cookiecutter.env_git_url_shared_library_submodule }}"
+    )
 # Add git submodules to PYTHONPATH
 # NOTE: Additional directories can be added to PYTHONPATH using ';' as a delimiter (NO SPACES!)
 dotenv.set_key(
