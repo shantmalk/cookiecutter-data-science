@@ -169,7 +169,7 @@ elif "macos" in platform.platform().lower():
     os.system("python%s -m venv .venv" % "{{ cookiecutter.python_version_number }}")
 
     # Install dependencies
-    os.system(".venv\Scripts\python -m pip install -r requirements.txt")
+    os.system(".venv/Scripts/python -m pip install -r requirements.txt")
 
     # Complete first commit
     os.system("git add .")
