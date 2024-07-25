@@ -143,15 +143,15 @@ if (
         "git submodule add %s"
         % "{{ cookiecutter.env_git_url_shared_library_submodule }}"
     )
-# Add git submodules to PYTHONPATH
-# NOTE: Additional directories can be added to PYTHONPATH using ';' as a delimiter (NO SPACES!)
-dotenv.set_key(
-    dotenv_path=env_file_path,
-    key_to_set="PYTHONPATH",
-    value_to_set="{{ cookiecutter.env_git_url_shared_library_submodule }}".split("/")[
-        -1
-    ],
-)
+    # Add git submodules to PYTHONPATH
+    # NOTE: Additional directories can be added to PYTHONPATH using ';' as a delimiter (NO SPACES!)
+    dotenv.set_key(
+        dotenv_path=env_file_path,
+        key_to_set="PYTHONPATH",
+        value_to_set="{{ cookiecutter.env_git_url_shared_library_submodule }}".split(
+            "/"
+        )[-1],
+    )
 
 # Intiate venv
 # NOTE: This might not work on MacOS?
