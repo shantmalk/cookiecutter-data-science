@@ -4,6 +4,7 @@ from copy import copy
 from pathlib import Path
 import subprocess
 import json
+import os
 
 # https://github.com/cookiecutter/cookiecutter/issues/824
 #   our workaround is to include these utility functions in the CCDS package
@@ -124,12 +125,16 @@ dotenv.set_key(
 
 # Initiate git repo
 # NOTE: Can this be done in one command?
-subprocess.run("git init")
+# subprocess.run("git init")
+os.system("git init")
 
 # Add git submodules
 # NOTE: This will fail without clear warning
 # NOTE: This might need to be modified to allow specifying a branch
-subprocess.run(
+# subprocess.run(
+#     "git submodule add %s" % "{{ cookiecutter.env_git_url_shared_library_submodule }}"
+# )
+os.system(
     "git submodule add %s" % "{{ cookiecutter.env_git_url_shared_library_submodule }}"
 )
 # Add git submodules to PYTHONPATH
